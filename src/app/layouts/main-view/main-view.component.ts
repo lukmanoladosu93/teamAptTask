@@ -119,6 +119,7 @@ export class MainViewComponent implements OnInit {
       console.log(Math.floor(random));
       let colorIndex = this.random(3, 0);
       let array = {
+        globalWidth: random,
         progress: random,
         positionStart: randomPositionStart,
         positionEnd: randomPositionEnd,
@@ -157,10 +158,12 @@ export class MainViewComponent implements OnInit {
     });
     this.totalProgress = sum / 10;
   }
-  // returnActive(data: any) {
-  //   let day = this.dat.date();
-  //   if (data === this.today) {
-  //     return 'active-date';
-  //   }
-  // }
+  returnActive(data: any) {
+    console.log('data coming:' + data);
+    if (data === this.today) {
+      return 'active-date';
+    } else {
+      return;
+    }
+  }
 }

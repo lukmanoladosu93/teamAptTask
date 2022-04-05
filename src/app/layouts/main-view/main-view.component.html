@@ -58,11 +58,16 @@
       <div class="col-lg-12">
         <div class="dates d-flex justify-content-between">
           <div
+            [ngStyle]="{
+              backgroundColor: item === today ? 'blue' : '',
+              padding: item === today ? '0 15px' : ''
+            }"
+            [className]="item === today ? 'active-class' : ''"
             class="nested1 text-center"
             *ngFor="let item of daysArray; let i = index"
           >
             {{ dayNameArray[i]
-            }}<span class="text-muted"
+            }}<span
               >{{ item }}
               <div class="vl" *ngIf="item === today"></div>
             </span>
@@ -99,7 +104,7 @@
         <div
           class="position-absolute coli"
           [ngStyle]="{
-            width: progressBArray[i]?.progress.toString() + '%',
+            width: progressBArray[i]?.globalWidth.toString() + '%',
             backgroundColor: progressBArray[i]?.bgColor,
             left: progressBArray[i]?.positionStart.toString() + 'px',
             right: progressBArray[i]?.positionEnd.toString() + 'px'
