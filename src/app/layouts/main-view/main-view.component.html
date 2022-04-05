@@ -60,7 +60,8 @@
           <div
             [ngStyle]="{
               backgroundColor: item === today ? 'blue' : '',
-              padding: item === today ? '0 15px' : ''
+              padding: item === today ? '0 15px' : '',
+              borderRadius: item === today ? '3px' : ''
             }"
             [className]="item === today ? 'active-class' : ''"
             class="nested1 text-center"
