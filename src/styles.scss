@@ -1,0 +1,233 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+  font-family: "Comfortaa", cursive;
+
+  a {
+    cursor: pointer;
+  }
+}
+.container-fluid {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+.side_nav {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  background-color: #efefef;
+  width: 250px;
+  padding-top: 25px;
+  transition: 0.5s ease-out;
+  .company_name {
+    padding: 0 30px;
+    position: relative;
+
+    h4 {
+      font-size: 1.2rem;
+    }
+
+    #menu-toggler {
+      position: absolute;
+      right: 25px;
+      top: -2px;
+    }
+  }
+  .side-menus {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+      padding: 15px 30px;
+      cursor: pointer;
+
+      &:hover {
+        background-color: blue;
+        a {
+          color: #fff;
+        }
+      }
+      a {
+        color: black;
+        text-decoration: none;
+        font-size: 0.825rem;
+      }
+    }
+    .active {
+      background-color: blue;
+
+      a {
+        color: #fff;
+      }
+    }
+  }
+  .create-new-task {
+    margin-top: 20px;
+    padding: 0 30px;
+
+    a {
+      width: 100% !important;
+      background-color: lightblue;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      border-radius: 10px;
+      align-items: center;
+      font-size: 0.825rem;
+      text-decoration: none;
+      cursor: pointer;
+      color: #000;
+
+      i {
+        color: blue;
+        font-size: 1rem;
+      }
+    }
+  }
+}
+
+.app-header {
+  margin-left: 250px;
+  background-color: transparent;
+  height: 70px;
+  padding: 25px 30px;
+  transition: 0.5s ease-out;
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    ol {
+      padding: 0;
+      margin: 0;
+    }
+
+    .breadcrumb {
+      background-color: transparent;
+      a {
+        color: #000;
+        font-weight: 700;
+      }
+    }
+    .nav-menu-icons {
+      display: flex;
+      > * {
+        margin-left: 25px;
+        cursor: pointer;
+        text-decoration: none;
+      }
+
+      .vertical-div-divider {
+        height: 20px;
+        border: 1.5px solid #ccc;
+        background-color: #ccc;
+      }
+      .dropdown {
+        margin-left: 60px;
+
+        a {
+          color: #000;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+  float: left;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+  color: #6c757d;
+  content: ">";
+}
+
+.dropdown-toggle::after {
+  color: #ccc;
+}
+
+main {
+  margin-left: 250px;
+  margin-top: 30px;
+  transition: 0.5s ease-out;
+}
+
+.general-progress {
+  font-size: 0.75rem;
+  color: #ccc;
+
+  .progress {
+    width: 200px;
+    height: 5px;
+    margin-left: 10px;
+
+    .progress-bar {
+      height: inherit;
+      background-color: green;
+    }
+  }
+}
+
+.users-div {
+  .btn-invite {
+    border: 1px dashed #ccc;
+    font-size: 14px;
+    color: #808080;
+    min-width: 100px;
+  }
+  .users-images {
+    div {
+      height: 30px;
+      width: 30px;
+      border-radius: 50%;
+      background-color: #6c757d;
+      margin-left: -10px;
+      border: 1px solid #000;
+    }
+  }
+}
+
+.month-filter {
+  select {
+    width: 200px;
+    height: 30px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    margin-left: 15px;
+    padding: 0 15px;
+    font-size: 14px;
+  }
+}
+.user-div {
+  width: 100%;
+  background-color: #fff;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  position: relative;
+
+  .user-img {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background-color: #6c757d;
+    border: 1px solid #000;
+  }
+  h6 {
+    font-weight: 600;
+  }
+  p {
+    font-size: 0.825rem;
+    color: rgba(105, 105, 105, 0.8);
+  }
+  .fa-ellipsis-v {
+    position: absolute;
+    right: 20px;
+    top: 25px;
+    color: rgba(105, 105, 105, 0.8);
+  }
+}

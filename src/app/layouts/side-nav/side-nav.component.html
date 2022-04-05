@@ -1,0 +1,56 @@
+<div
+  class="side_nav"
+  id="sideNav"
+  [ngStyle]="{
+    width: bigNav ? '250px' : '100px'
+  }"
+>
+  <div class="company_name">
+    <h4>PJ</h4>
+    <a id="menu-toggler" (click)="toggleNav()"><i class="fa fa-bars"></i></a>
+  </div>
+  <ul class="mt-5 side-menus">
+    <li routerLinkActive="active" [routerLink]="['/dashboard']">
+      <a
+        ><i class="fa fa-dashboard"></i>
+        <span class="px-2" *ngIf="bigNav">Dashboard</span>
+      </a>
+    </li>
+    <li routerLinkActive="active" [routerLink]="['/analytics']">
+      <a
+        ><i class="fa fa-line-chart"></i>
+        <span class="px-2" *ngIf="bigNav">Analytics</span>
+      </a>
+    </li>
+    <li routerLinkActive="active" [routerLink]="['/projects']">
+      <a
+        ><i class="fa fa-folder"></i>
+        <span class="px-2" *ngIf="bigNav">Projects</span>
+      </a>
+    </li>
+    <li routerLinkActive="active" [routerLink]="['/tracking']">
+      <a
+        ><i class="fa fa-clock-o"></i>
+        <span class="px-2" *ngIf="bigNav">Tracking</span>
+      </a>
+    </li>
+    <li routerLinkActive="active" [routerLink]="['/history']">
+      <a
+        ><i class="fa fa-history"></i>
+        <span class="px-2" *ngIf="bigNav">History</span>
+      </a>
+    </li>
+    <li routerLinkActive="active" [routerLink]="['/settings']">
+      <a
+        ><i class="fa fa-cog"></i>
+        <span class="px-2" *ngIf="bigNav">Settings</span>
+      </a>
+    </li>
+  </ul>
+
+  <div class="create-new-task" *ngIf="bigNav">
+    <a class="create-task"
+      >Create new <br />task <i class="fa fa-plus-circle"></i
+    ></a>
+  </div>
+</div>
